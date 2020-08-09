@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "film-scheduler"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-qcn6kbzyt5pf"
+s3_prefix = "film-scheduler"
+region = "eu-west-2"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+

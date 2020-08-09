@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: >-
+  film-scheduler-service
+Transform:
+- AWS::Serverless-2016-10-31
+Resources:
+  createSchedule:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/index.handler
+      Runtime: nodejs12.x
+      MemorySize: 128
+      Timeout: 3
+      Description: Post a catalogue of films, returns a completed schedule.
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /api
+            Method: post

@@ -1,0 +1,20 @@
+{
+    "name": "filmschedulerservice",
+    "version": "1.0.0",
+    "description": "Schedule films across the week and populate a CSV",
+    "private": true,
+    "dependencies": {
+        "@babel/runtime": "^7.11.1",
+        "aws-sdk": "^2.437.0"
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
+        "babel-jest": "^26.2.2",
+        "jest": "^24.9.0"
+    },
+    "scripts": {
+        "test": "jest",
+        "test-load": "sam local invoke -d 9999 createSchedule -e events/event.json"
+    }
+}
